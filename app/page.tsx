@@ -1,13 +1,10 @@
 import Container from "@/components/Container";
-import { Button } from "@/components/ui/button";
+import HomeBanner from "@/components/HomeBanner";
 
 export default function Home() {
   return (
-    <Container >
-      <div>
-      <h1>Home Page</h1>
-      <Button size="lg"  >Check Out</Button>
-    </div>
+    <Container className="bg-shop_light_pink " >
+      <HomeBanner />
     </Container>
   );
 }
