@@ -17,7 +17,7 @@ const socialLink = [
 
 function SocialMedia({className, iconClassName}: SocialMediaProps) {
   return (
-    <div className={cn("flex items-center gap-3.5", className)}>
+    <div className={cn("flex items-center gap-3.5 ", className)}>
             {socialLink.map(item => (
                 <Link className={cn("p-2 border rounded-full text-white hover:border-shop_light_green hoverEffect", iconClassName)} href="#" key={item.title}>
                     {item.icon}
