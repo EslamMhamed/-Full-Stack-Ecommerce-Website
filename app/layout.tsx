@@ -1,44 +1,12 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs'
 
-
-
-export const metadata: Metadata = {
-  title:{
-    template:  "%s - Shopcart online store",
-    default: "Shopcart online store"
-  },
-  description: "Shopcart online store, Your one stop shop for all your needs",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+function RootLayout({children}:{children: React.ReactNode}) {
   return (
-    <ClerkProvider >
-      <html lang="en">
+   <html lang="en">
         <body className="font-poppins antialiased">
-       <div className="flex flex-col min-h-screen">
-         <Header />
-         <main className="flex-1">
-          {children}
-         </main>
-        <Footer />
-       </div>
+            {children}
         </body>
-      </html>
-    </ClerkProvider>
-  );
+    </html>
+  )
 }
+
+export default RootLayout
